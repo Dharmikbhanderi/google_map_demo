@@ -10,6 +10,8 @@ class DetailScreen extends GetView<DetailScreenController> {
   final Completer<GoogleMapController> _controller =
   Completer<GoogleMapController>();
 
+  GoogleMapController? controllerTest;
+
   CameraPosition? _kGooglePlex;
 
   DetailScreen() {
@@ -29,7 +31,8 @@ class DetailScreen extends GetView<DetailScreenController> {
             mapType: MapType.hybrid,
             initialCameraPosition: _kGooglePlex!,
             onMapCreated: (GoogleMapController controller) {
-              _controller.complete(controller);
+              controllerTest = controllerTest;
+              // _controller.complete(controller);
             },
             markers: _createMarker(),
           ),
